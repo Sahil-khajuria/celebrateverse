@@ -1,0 +1,56 @@
+spring:
+  application:
+    name: celebrateverse-backend
+  servlet:
+    multipart:
+      max-file-size: 500MB
+      max-request-size: 500MB
+  datasource:
+    url: jdbc:postgresql://ep-late-hat-axdojz2y.c-4.us-east-2.aws.neon.tech/neondb?sslmode=require
+    username: neondb_owner
+    password: npg_Y5qHPB4WgRhI
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+  flyway:
+    enabled: false
+
+server:
+  port: 8080
+
+jwt:
+  secret: ${JWT_SECRET:celebrateverse-super-secret-jwt-key-256-bits-minimum-length-here}
+  expiration: 86400000
+  refresh-expiration: 604800000
+
+cloudinary:
+  cloud-name: m0rxrf5d
+  api-key: 844558761937824
+  api-secret: kxlC5DcEKphNNx9LQepgjqvk254
+
+media:
+  upload-dir: ${MEDIA_UPLOAD_DIR:/home/sahil-khajuria/birthday/frontend/public/uploads}
+  url-prefix: ${MEDIA_URL_PREFIX:/uploads}
+
+ai:
+  api-key: ${AI_API_KEY:}
+  model: gemini-2.0-flash
+  endpoint: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent
+
+cors:
+  allowed-origins: ${CORS_ALLOWED_ORIGINS:http://localhost:3000}
+
+app:
+  base-url: ${APP_BASE_URL:http://localhost:3000}
+
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html

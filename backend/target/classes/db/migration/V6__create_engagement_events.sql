@@ -1,0 +1,7 @@
+CREATE TABLE engagement_events (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    page_id BIGINT NOT NULL,
+    event_type VARCHAR(50) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (page_id) REFERENCES birthday_pages(id) ON DELETE CASCADE
+);

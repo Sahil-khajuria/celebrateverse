@@ -1,0 +1,9 @@
+CREATE TABLE media_assets (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    page_id BIGINT NOT NULL,
+    type VARCHAR(50) NOT NULL,
+    url VARCHAR(500) NOT NULL,
+    sort_order INT DEFAULT 0,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (page_id) REFERENCES birthday_pages(id) ON DELETE CASCADE
+);
