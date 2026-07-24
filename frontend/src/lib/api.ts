@@ -1,6 +1,6 @@
 import axios, { AxiosError, InternalAxiosRequestConfig } from 'axios'
 
-const BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8080/api/v1'
+const BASE_URL = 'https://celebrateverse.onrender.com/api/v1';
 
 export const apiClient = axios.create({
   baseURL: BASE_URL,
