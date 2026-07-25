@@ -24,7 +24,7 @@ public class MediaAsset {
     private MediaType type;
 
     @Lob
-    @Column(nullable=false, columnDefinition="LONGTEXT")
+    @Column(nullable=false, columnDefinition="TEXT")
     private String url;
 
     @Builder.Default
