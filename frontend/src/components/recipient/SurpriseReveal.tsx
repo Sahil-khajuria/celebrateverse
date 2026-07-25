@@ -314,7 +314,7 @@ export default function SurpriseReveal({ pageData, isCalmMode, slug, slideshowSo
                   Dear {pageData?.recipientName},
                 </h3>
                 <p className="font-serif text-xl md:text-3xl leading-relaxed text-slate-700 whitespace-pre-wrap italic mb-16">
-                  "{slide.message}"
+                  &quot;{slide.message}&quot;
                 </p>
                 <div className="text-center">
                   <p className="font-serif text-xl text-slate-500 uppercase tracking-widest mb-4">With love</p>
